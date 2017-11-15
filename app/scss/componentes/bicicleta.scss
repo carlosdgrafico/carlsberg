@@ -1,0 +1,20 @@
+.bicicleta{
+   background-image: url(../img/sombra.png);
+   background-repeat: no-repeat;
+   background-position: center;
+   font-family: 'Carlsberg-Bold';
+   margin: 4em auto 0 auto;
+   text-align: center;
+   .bicileta--titulo{
+      display: inline-block;
+      @include font-size(57);
+      @include line-height(69);
+      &:last-child{
+         text-transform: uppercase;
+      }
+   }
+   .bicicleta--bicicleta{
+      max-width: 1000px;
+      margin: 4em auto;
+   }
+}
