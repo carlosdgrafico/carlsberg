@@ -20,9 +20,88 @@ body
 		h2.bicileta--titulo.bicileta--titulo__last ¡Gana una increíble 
 			br
 			| bicicleta Carlsberg!
-			
+
 	figure.Logotipo
 		img(src="img/logotipo.svg", alt="Logotipo Carlsberg")
-		
-			
+
+	section.contacto
+		.container
+			.row
+				.col.s5
+					.contacto--titulo Como 
+						br
+						|participar ?
+					ul.contacto--list
+						li.contacto--list--item
+							span c
+							| Debes ir a uno de nuestros bares en promoción
+						li.contacto--list--item
+							span c
+							| Pide una Carlsberg y exige al mozo tu código para participar.
+						li.contacto--list--item
+							span c
+							| Ingresa el código en este sitio y sabrás si eres el ganador.
+						li.contacto--list--item
+							span c
+							| Debes tener la boleta de compra y el código para exigir tu premio.
+					a.boton.waves-effect(href="javascript:;") Bases y condiciones
+
+				.col.s6.offset-s1
+					.contacto--formulario
+						form(name='formulario' method='post' action='')
+							.row
+								.col.s6
+									.input-field
+										input.validate(type='text' name='nombre')
+										label(for='nombre') Nombre
+								.col.s6
+									.input-field
+										input.validate(type='text' name='apellido')
+										label(for='apellido') Apellido
+								.col.s6
+									.input-field
+										input.validate(type='number' name='rut')
+										label(for='rut') Rut
+								.col.s6
+									.input-field
+										input.validate(type='tel' name='celular' data-length="9")
+										label(for='celular' data-error="ingresar un numero valido") Celular
+
+							.input-field
+								input.validate(type='email' name='email')
+								label(for='email' data-error="ingrese una direccion valida") Email
+								
+							.input-field
+								input.validate(type='number' name='codigo' data-length="4")
+								label(for='codigo' data-error="ingresa un código valido") Código Carlsberg
+
+							.selectCarlsberg
+								.selectCarlsberg--icon
+								.input-field
+									select
+										option(value='' selected) En que local estás ?
+										optgroup(label='Poniente')
+											option(value='1') Local uno
+											option(value='2') Local dos
+											option(value='3') Local Tres
+										optgroup(label='Oriente')
+											option(value='4') Local cuatro
+											option(value='5') Local cinco
+											option(value='6') Local seis
+							
+							.contacto--formulario--check
+								input(type="checkbox", id="terminos" name="", value="")
+								label(for="terminos") Acepto las bases y condiciones
+								
+								
+										
+
+
+							.contacto--formulario--botones
+								button.boton.boton__borrar.waves-effect(type="reset") 
+									| Borrar
+								button.boton.waves-effect(type="submit") 
+									| Enviar
+
+
 	include templates/footer

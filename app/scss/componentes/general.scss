@@ -49,3 +49,179 @@ body{
    max-width: 340px;
    margin: 3em auto;
 }
+
+
+.contacto{
+   color: #fff;
+   &--titulo{
+      @include font-size(57);
+      @include line-height(72);
+   }
+   &--list{
+      margin-top: 4em;
+      margin-bottom: 3em;
+      &--item{
+         @include font-size(14);
+         @include line-height(22);
+         margin-top: 1em;
+
+         span{
+            font-family: 'carlsberg-icons';
+            @include font-size(12);
+            @include line-height(22);
+            margin-right: .7em;
+         }
+      }
+   }
+
+   .input-field{
+      margin-bottom: .5em;
+      label{
+         color: #fff;
+      }
+      label.active{
+         color: #BC7345 !important;
+      }
+   }
+
+}
+
+
+.boton{
+   background-color: transparent;
+   outline: 1px solid #fff;
+   color: #fff;
+   font-family: 'Carlsberg-Bold';
+   @include font-size(24);
+   @include line-height(28);
+   padding: .6em;
+   text-align: center;
+   transition: all .3s ease-out;
+   width: 100%;
+   &:hover, &:focus{
+      background-color: #fff;
+      color: #1D3126;
+      outline: 1px solid #fff;
+   }
+}
+
+button.boton{
+   border: none !important;
+}
+
+.contacto--formulario--botones{
+   display: flex;
+   justify-content: space-between;
+   margin-top: 4em;
+   .boton{
+      width: 47%;
+   }
+}
+
+
+.selectCarlsberg{
+   font-family:'Carlsberg-Regular', Sans-Serif;
+   border-bottom: 1px solid #9B9B9B;
+   position: relative;
+
+   .selectCarlsberg--icon{
+		background-color: transparent;
+      height: 100%;
+      display: inline-block;
+      overflow: hidden;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 60px;
+      &:after{
+         content:url(../img/arrow.svg);
+         position: absolute;
+         top: .6em;
+         right: 1em;
+         z-index: 2;
+         pointer-events:none;
+      }
+   }
+
+   .select-wrapper {
+      top: -5px;
+
+      ul{
+         max-height: 350px;
+
+         li>span{
+            font-family:'Carlsberg-Regular', Sans-Serif;
+            color: #0F7642;
+         }
+
+         .selected, .active{
+            font-family:'Carlsberg-Regular', Sans-Serif;
+         }
+
+         .optgroup{
+            span{
+               font-family:'Carlsberg-Bold', Sans-Serif;
+               color: #1D3126;
+            }
+         }
+      }
+   }
+
+
+   .select-wrapper input.select-dropdown {
+      border-bottom: none;
+      box-sizing: border-box;
+      margin-bottom: 0;
+      padding-left: .2em;
+   }
+
+   .select-wrapper span.caret{
+      right: 20px;
+      display: none;
+   }
+
+}
+
+
+
+
+input.valid:not([type]), input.valid:not([type]):focus, input[type=text].valid:not(.browser-default), input[type=text].valid:not(.browser-default):focus, input[type=password].valid:not(.browser-default), input[type=password].valid:not(.browser-default):focus,
+input[type=email].valid:not(.browser-default), input[type=email].valid:not(.browser-default):focus, input[type=url].valid:not(.browser-default), input[type=url].valid:not(.browser-default):focus, input[type=time].valid:not(.browser-default), input[type=time].valid:not(.browser-default):focus,
+input[type=date].valid:not(.browser-default), input[type=date].valid:not(.browser-default):focus, input[type=datetime].valid:not(.browser-default), input[type=datetime].valid:not(.browser-default):focus, input[type=datetime-local].valid:not(.browser-default), input[type=datetime-local].valid:not(.browser-default):focus,
+input[type=tel].valid:not(.browser-default), input[type=tel].valid:not(.browser-default):focus, input[type=number].valid:not(.browser-default), input[type=number].valid:not(.browser-default):focus, input[type=search].valid:not(.browser-default), input[type=search].valid:not(.browser-default):focus, textarea.materialize-textarea.valid,
+textarea.materialize-textarea.valid:focus, .select-wrapper.valid>input.select-dropdown {
+    border-bottom: 1px solid #BC7345 !important;
+    -webkit-box-shadow: 0 1px 0 0 #BC7345 !important;
+    box-shadow: 0 1px 0 0 #BC7345 !important;
+}
+
+input:not([type]):focus:not([readonly]),
+input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]),
+input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]),
+input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]),
+input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]),
+input[type=search]:not(.browser-default):focus:not([readonly]),{
+    border-bottom: 1px solid #BC7345 !important;
+    -webkit-box-shadow: 0 1px 0 0 #BC7345 !important;
+    box-shadow: 0 1px 0 0 #BC7345 !important;
+}
+
+
+.contacto--formulario--check{
+   margin-top: 3em;
+
+   label{
+      color: #fff;
+   }
+}
+
+
+[type="checkbox"]+label:before, [type="checkbox"]:not(.filled-in)+label:after {
+   border: 2px solid #fff;
+}
+
+[type="checkbox"]:checked+label:before {
+   border-right: 2px solid #BC7345 ;
+   border-bottom: 2px solid #BC7345 ;
+}
