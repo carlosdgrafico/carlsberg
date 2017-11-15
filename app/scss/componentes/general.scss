@@ -49,3 +49,130 @@ body{
    max-width: 340px;
    margin: 3em auto;
 }
+
+
+.contacto{
+
+   &--titulo{
+      @include font-size(57);
+      @include line-height(72);
+   }
+   &--list{
+      margin-top: 4em;
+      margin-bottom: 3em;
+      &--item{
+         @include font-size(14);
+         @include line-height(22);
+         margin-top: 1em;
+
+         span{
+            font-family: 'carlsberg-icons';
+            @include font-size(12);
+            @include line-height(22);
+            margin-right: .7em;
+         }
+      }
+   }
+}
+
+
+.boton{
+   background-color: transparent;
+   outline: 1px solid #fff;
+   color: #fff;
+   font-family: 'Carlsberg-Bold';
+   @include font-size(24);
+   @include line-height(28);
+   padding: .6em;
+   text-align: center;
+   transition: all .3s ease-out;
+   width: 100%;
+   &:hover, &:focus{
+      background-color: #fff;
+      color: #1D3126;
+      outline: 1px solid #fff;
+   }
+}
+
+button.boton{
+   border: none !important;
+}
+
+.contacto--formulario--botones{
+   display: flex;
+   justify-content: space-between;
+   margin-top: 4em;
+   .boton{
+      width: 47%;
+   }
+}
+
+
+.selectGreat{
+   font-family:'Carlsberg-Regular', Sans-Serif; /* 1 */
+   border-bottom: 1px solid #9B9B9B;
+   // border-radius: 5px;
+   position: relative;
+   // background-color: #fff;
+
+   .selectGreat--icon{
+		background-color: transparent;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      height: 100%;
+      display: inline-block;
+      overflow: hidden;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 60px;
+      &:after{
+         content:url(../img/arrow.svg);
+         position: absolute;
+         top: .6em;
+         right: 1em;
+         z-index: 2;
+         pointer-events:none;
+      }
+   }
+
+   .select-wrapper {
+      top: -5px;
+
+      ul{
+         max-height: 350px;
+
+         li>span{
+            font-family:'Carlsberg-Regular', Sans-Serif; /* 1 */
+            color: purple;
+         }
+
+         .selected, .active{
+            font-family:'Carlsberg-Regular', Sans-Serif; /* 1 */
+         }
+
+         .optgroup{
+            span{
+               font-family:'Carlsberg-Regular', Sans-Serif; /* 1 */
+            }
+         }
+      }
+   }
+
+   .select-wrapper input.select-dropdown {
+      border-bottom: none;
+      box-sizing: border-box;
+      margin-bottom: 0;
+      padding-left: 1em;
+   }
+
+   .select-wrapper span.caret{
+      right: 20px;
+      display: none;
+   }
+
+   input[value="Selecciona tu comuna..."]{
+      font-family:'Carlsberg-Regular', Sans-Serif;
+      color: red;
+   }
+}
