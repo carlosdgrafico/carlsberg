@@ -1,0 +1,21 @@
+{
+  "name": "carlsberg",
+  "description": "Landing page Carlsberg",
+  "main": "index.js",
+  "authors": [
+    "Carlos Fuentes Díaz"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/carlosdgrafico/carlsberg",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "materialize": "^0.100.2",
+    "animate.css": "^3.5.2"
+  }
+}

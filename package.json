@@ -1,0 +1,30 @@
+{
+  "name": "carlsberg",
+  "version": "1.0.0",
+  "description": "Landing page Carlsberg",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlosdgrafico/carlsberg.git"
+  },
+  "author": "Carlos Fuentes Díaz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carlosdgrafico/carlsberg/issues"
+  },
+  "homepage": "https://github.com/carlosdgrafico/carlsberg#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^3.4.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^4.3.11",
+    "gulp-webserver": "^0.9.1"
+  }
+}
