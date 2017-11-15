@@ -1,9 +1,11 @@
 /* BASE - GENERALES */
 @import 'base/fuentes.scss';
+@import 'base/icon.scss';
 @import 'base/variables.scss';
 @import 'base/mixins.scss';
 @import 'base/inicializacion.scss';
 
 
-/* ESTE CSS SIEMPRE TIENE QUE ESTAR AL FINAL */
+
+@import 'componentes/general.scss';
 @import 'componentes/helper.scss';
