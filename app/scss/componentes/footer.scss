@@ -38,6 +38,9 @@
       display: inline-block;
       vertical-align: middle;
       width: 100px;
+      @media(max-width: 480px){
+         width: 60px;
+      }
    }
 
    &--slogan{
@@ -47,5 +50,9 @@
       margin-left: 1em;
       opacity: .5;
       vertical-align: middle;
+
+      @media(max-width: 480px){
+         @include font-size(11);
+      }
    }
 }

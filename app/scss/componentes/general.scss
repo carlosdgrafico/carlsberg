@@ -17,10 +17,19 @@ body{
    &--logotipo{
       margin: 0 auto;
       width: 200px;
+      @media(max-width: 480px){
+         width: 130px;
+      }
    }
    &--slogan{
       @include font-size(18);
       margin-top: .3em;
+      @media(max-width: 480px){
+         @include font-size(14);
+      }
+      @media(max-width: 320px){
+         @include font-size(12);
+      }
    }
 }
 
@@ -28,6 +37,11 @@ body{
 .Logotipo{
    max-width: 340px;
    margin: 5em auto 7em auto;
+
+   @media(max-width: 480px){
+      max-width: 50%;
+      margin: 2em auto 4em auto;
+   }
 }
 
 
@@ -38,14 +52,21 @@ body{
    font-family: 'Carlsberg-Bold';
    @include font-size(24);
    @include line-height(28);
+   margin-bottom: 1em;
    padding: .6em;
    text-align: center;
    transition: all .3s ease-out;
    width: 100%;
+
    &:hover, &:focus{
       background-color: #fff;
       color: #1D3126;
       outline: 1px solid #fff;
+   }
+
+   @media(max-width: 768px){
+      @include font-size(18);
+      @include line-height(22);
    }
 }
 

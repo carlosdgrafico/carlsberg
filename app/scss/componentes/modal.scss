@@ -11,12 +11,21 @@
          padding: 3em !important;
          position: relative !important;
 
+
+         @media(max-width: 480px){
+            padding: .5em !important;
+         }
+
          .modalBases--contenido{
-            //background-color: olive !important;
+            // background-color: olive !important;
             height: 100%;
             overflow: scroll;
             padding: 2em;
             text-align: center;
+
+            @media(max-width: 480px){
+               padding: 1em !important;
+            }
          }
 
          .modalBases--contenido--titulo{
@@ -55,6 +64,10 @@
       max-height: inherit;
       overflow: hidden;
 
+      @media(max-width: 480px){
+         height: 80vh;
+      }
+
       .modal-content{
          height: 100% !important;
          overflow: hidden !important;
@@ -62,9 +75,14 @@
          position: relative !important;
          display: flex;
 
+         @media(max-width: 480px){
+            display: flex;
+            flex-direction: column;
+         }
+
 
          .modalCarlsberg--contenido{
-            //background-color: olive !important;
+            // background-color: olive !important;
             height: 100%;
             display: inline-block;
             overflow: hidden;
@@ -94,6 +112,23 @@
                   width: 25%;
                }
             }
+
+            @media(max-width: 480px){
+               padding: .5em;
+               width: 100%;
+
+               &__left{
+                  padding: 0;
+               }
+
+               &--imagen{
+                  background-position: -170px 50%;
+                  img{
+                     margin-top: 15%;
+                     width: 20%;
+                  }
+               }
+            }
          }
 
          .modalCarlsberg--contenido--icon{
@@ -101,6 +136,10 @@
             display: inline-block;
             @include font-size(80);
             margin-top: .2em;
+
+            @media(max-width: 480px){
+               @include font-size(60);
+            }
          }
 
          .modalCarlsberg--contenido--titulo{
@@ -109,14 +148,24 @@
             @include font-size(30);
             text-align: center;
             margin: 1em auto .5em auto;
+
+            @media(max-width: 480px){
+               margin: .3em auto;
+               @include font-size(18);
+            }
          }
 
          .modalCarlsberg--contenido--text{
             color: #000;
             @include font-size(14);
-            @include line-height(27);
+            @include line-height(20);
             text-align: center;
             opacity: .4;
+
+            @media(max-width: 480px){
+               @include font-size(12);
+               @include line-height(14);
+            }
          }
 
          .modalCarlsberg--contenido--boton{
@@ -125,6 +174,12 @@
             color: #EB6071;
             margin-top: 2em;
             padding: .5em 1.5em;
+
+            @media(max-width: 480px){
+               @include font-size(14);
+               margin-top: .7em;
+               padding: .3em 1.2em;
+            }
          }
 
       }
@@ -143,6 +198,7 @@
 
 .modalCarlsberg__ganador{
    .modalCarlsberg--contenido--imagen{
+      background-position: -150px 50% !important;
       img{
          width: 80% !important;
       }
@@ -160,8 +216,14 @@
 
 .modalCarlsberg__error{
    .modalCarlsberg--contenido--imagen{
+      background-image: none !important;
       img{
+         margin-top: 30% !important;
          width: 50% !important;
+
+         @media(max-width: 480px){
+            margin-top: 17% !important;
+         }
       }
    }
 }

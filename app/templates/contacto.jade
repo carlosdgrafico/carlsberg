@@ -1,7 +1,7 @@
 section.contacto
 	.container
 		.row
-			.col.s5
+			.col.s12.m5.wow.fadeInLeft
 				.contacto--titulo Como
 					br
 					|participar ?
@@ -31,23 +31,23 @@ section.contacto
 				
 				
 
-			.col.s6.offset-s1
+			.col.s12.m6.offset-m1.wow.fadeInRight(data-wow-delay=".5s")
 				.contacto--formulario
 					form(name='formulario' method='post' action='')
 						.row
-							.col.s6
+							.col.s12.l6
 								.input-field
 									input.validate(type='text' name='nombre')
 									label(for='nombre') Nombre
-							.col.s6
+							.col.s12.l6
 								.input-field
 									input.validate(type='text' name='apellido')
 									label(for='apellido') Apellido
-							.col.s6
+							.col.s12.l6
 								.input-field
 									input.validate(type='number' name='rut')
 									label(for='rut') Rut
-							.col.s6
+							.col.s12.l6
 								.input-field
 									input.validate(type='tel' name='celular' data-length="9")
 									label(for='celular' data-error="ingresar un numero valido") Celular

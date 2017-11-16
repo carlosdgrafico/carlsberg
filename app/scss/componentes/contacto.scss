@@ -5,6 +5,14 @@
    &--titulo{
       @include font-size(57);
       @include line-height(72);
+      @media(max-width: 768px){
+         @include font-size(36);
+         @include line-height(48);
+      }
+      @media(max-width: 768px){
+         @include font-size(36);
+         @include line-height(48);
+      }
    }
    &--list{
       margin-top: 4em;

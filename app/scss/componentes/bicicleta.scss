@@ -12,9 +12,24 @@
       &:last-child{
          text-transform: uppercase;
       }
+      @media(max-width: 768px){
+         @include font-size(48);
+         @include line-height(55);
+      }
+      @media(max-width: 480px){
+         @include font-size(26);
+         @include line-height(30);
+      }
+      @media(max-width: 320px){
+         @include font-size(22);
+         @include line-height(26);
+      }
    }
    .bicicleta--bicicleta{
       max-width: 1000px;
       margin: 4em auto;
+      @media(max-width: 768px){
+         max-width: 90%;
+      }
    }
 }
