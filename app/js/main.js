@@ -18,7 +18,82 @@ $(document).ready(function(){
        resetAnimation: true,     // reset animation on end (default is true)
      }
    );
-   
+
    wow.init();
 
+
+  $('#form').submit((event) => {
+    event.preventDefault();
+
+    let msg = 'Faltan los siguientes campos: '
+    let attrs = []
+
+    if (!$('#name').val()) {
+      attrs.push('nombre')
+    }
+
+    if (!$('#lastName').val()) {
+      attrs.push('apellido')
+    }
+
+    if (!$('#rut').val()) {
+      attrs.push("rut")
+    }
+
+    if (!$('#phone').val()) {
+      attrs.push("teléfono")
+    }
+
+    if (!$('#email').val()) {
+      attrs.push("email")
+    }
+
+    if (!$('#code').val()) {
+      attrs.push("código")
+    }
+
+    if (!$('#place').val()) {
+      attrs.push("local")
+    }
+
+    if (!$('#terms').is(":checked")) {
+      attrs.push("aceptar términos de acuerdo")
+    }
+
+    if (attrs.length > 0) {
+      msg += attrs.toString() + '.'
+      return alert(msg)
+    }
+
+    const code = $('#code').val()
+
+    const values = {
+      name: $('#name').val(),
+      lastName: $('#lastName').val(),
+      dni: $('#rut').val(),
+      email: $('#email').val(),
+      phone: $('#phone').val(),
+      place: $('#place').val(),
+    }
+
+    // console.log('code: ', code, values)
+
+    axios.patch(`http://carlsberg-backend-dev.us-east-1.elasticbeanstalk.com/contest/${code}`, values)
+      .then((response) => {
+        // console.log(response);
+
+        if (response.status === 200) {
+          $('#perdedor.modal').modal('open')
+        } else {
+          $('#ganador.modal').modal('open')
+        }
+      })
+      .catch((error, xhr) => {
+        // if (error.response.status === 403) {
+          $('#error.modal').modal('open')
+        // }
+        // alert('Ocurrió un error la momento de procesar el formulario, inténtelo más tarde.')
+        console.log(error);
+      });
+  });
 });

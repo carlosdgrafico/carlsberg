@@ -19,51 +19,51 @@ section.contacto
 						span c
 						| Debes tener la boleta de compra y el código para exigir tu premio.
 				a.boton.waves-effect.modal-trigger(href="#bases") Bases y condiciones
-				
+
 				ul
-					li 
-						a.modal-trigger(href="#ganador") modal ganador
-					li 
-						a.modal-trigger(href="#perdedor") modal perdedor
-					li 
-						a.modal-trigger(href="#error") modal error
-				
-				
-				
+					li
+						a.modal-trigger(id="winner" href="#ganador")
+					li
+						a.modal-trigger(id="loser" href="#perdedor")
+					li
+						a.modal-trigger(id="error" href="#error")
+
+
+
 
 			.col.s12.m6.offset-m1.wow.fadeInRight(data-wow-delay=".5s")
 				.contacto--formulario
-					form(name='formulario' method='post' action='')
+					form(id='form' name='formulario' method='post' action='')
 						.row
 							.col.s12.l6
 								.input-field
-									input.validate(type='text' name='nombre')
+									input.validate(id='name' type='text' name='nombre' required)
 									label(for='nombre') Nombre
 							.col.s12.l6
 								.input-field
-									input.validate(type='text' name='apellido')
+									input.validate(id='lastName' type='text' name='apellido' required)
 									label(for='apellido') Apellido
 							.col.s12.l6
 								.input-field
-									input.validate(type='number' name='rut')
+									input.validate(id='rut' type='number' name='rut' required)
 									label(for='rut') Rut
 							.col.s12.l6
 								.input-field
-									input.validate(type='tel' name='celular' data-length="9")
+									input.validate(id='phone' type='tel' name='celular' data-length="9" required)
 									label(for='celular' data-error="ingresar un numero valido") Celular
 
 						.input-field
-							input.validate(type='email' name='email')
+							input.validate(id='email' type='email' name='email' required)
 							label(for='email' data-error="ingrese una direccion valida") Email
 
 						.input-field
-							input.validate(type='number' name='codigo' data-length="4")
+							input.validate(id='code' type='number' name='codigo' data-length="4" required)
 							label(for='codigo' data-error="ingresa un código valido") Código Carlsberg
 
 						.selectCarlsberg
 							.selectCarlsberg--icon
 							.input-field
-								select
+								select(id='place' required)
 									option(value='' selected) En que local estás ?
 									optgroup(label='Poniente')
 										option(value='1') Local uno
@@ -75,9 +75,8 @@ section.contacto
 										option(value='6') Local seis
 
 						.contacto--formulario--check
-							input(type="checkbox", id="terminos" name="", value="")
-							label(for="terminos") Acepto las bases y condiciones
-
+							input(type="checkbox", id="terms" name="terms", value="")
+							label(for="terms") Acepto las bases y condiciones
 
 						.contacto--formulario--botones
 							button.boton.boton__borrar.waves-effect(type="reset")
