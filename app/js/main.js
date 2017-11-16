@@ -3,6 +3,8 @@ $(document).ready(function(){
    $('select').material_select();
    $('.modal').modal();
 
+   $('#enviar').attr("disabled", true);
+
    var wow = new WOW(
      {
        boxClass:     'wow',      // animated element css class (default is wow)
@@ -18,7 +20,7 @@ $(document).ready(function(){
        resetAnimation: true,     // reset animation on end (default is true)
      }
    );
-   
+
    wow.init();
 
 });

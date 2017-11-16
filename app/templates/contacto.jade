@@ -37,23 +37,23 @@ section.contacto
 						.row
 							.col.s12.l6
 								.input-field
-									input.validate(type='text' name='nombre')
+									input.validate(type='text' name='nombre' required)
 									label(for='nombre') Nombre
 							.col.s12.l6
 								.input-field
-									input.validate(type='text' name='apellido')
+									input.validate(type='text' name='apellido' required)
 									label(for='apellido') Apellido
 							.col.s12.l6
 								.input-field
-									input.validate(type='number' name='rut')
+									input.validate(type='number' name='rut' required)
 									label(for='rut') Rut
 							.col.s12.l6
 								.input-field
-									input.validate(type='tel' name='celular' data-length="9")
+									input.validate(type='tel' name='celular' data-length="9" required)
 									label(for='celular' data-error="ingresar un numero valido") Celular
 
 						.input-field
-							input.validate(type='email' name='email')
+							input.validate(type='email' name='email' required)
 							label(for='email' data-error="ingrese una direccion valida") Email
 
 						.input-field
@@ -82,5 +82,5 @@ section.contacto
 						.contacto--formulario--botones
 							button.boton.boton__borrar.waves-effect(type="reset")
 								| Borrar
-							button.boton.waves-effect(type="submit")
+							button.boton.waves-effect(type="submit" disabled="true")
 								| Enviar
