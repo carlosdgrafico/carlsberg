@@ -18,7 +18,18 @@ section.contacto
 					li.contacto--list--item
 						span c
 						| Debes tener la boleta de compra y el código para exigir tu premio.
-				a.boton.waves-effect(href="javascript:;") Bases y condiciones
+				a.boton.waves-effect.modal-trigger(href="#bases") Bases y condiciones
+				
+				ul
+					li 
+						a.modal-trigger(href="#ganador") modal ganador
+					li 
+						a.modal-trigger(href="#perdedor") modal perdedor
+					li 
+						a.modal-trigger(href="#error") modal error
+				
+				
+				
 
 			.col.s6.offset-s1
 				.contacto--formulario

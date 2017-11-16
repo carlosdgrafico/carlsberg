@@ -1,0 +1,60 @@
+.modalBases
+	#bases.modal
+		a.modalBases--cerrar.modal-close(href="#!")
+			span.icon-icon-cerrar
+		.modal-content
+			.modalBases--contenido
+				h4.modalBases--contenido--titulo Bases y condiciones
+				p.modalBases--contenido--text Carlsberg believes that our beer brands are there to offer consumers refreshment and social enjoyment. They should be consumed responsibly by adults and misuse should be avoided.
+				p.modalBases--contenido--text Use of the Site is on the terms contained in this document (Terms of Use). If you do not agree to these Terms of Use, or if you are not of a legal drinking age according to the laws of your country or state, please stop using the Site immediately. By accessing and using the Site you are indicating your acceptance to be bound by these Terms of Use. They are a legal agreement between you and us that can only be amended with our consent. They should be read in conjunction with any details provided on the Site about how the Site operates and the services which are available. You should also read our Privacy Policy.
+				p.modalBases--contenido--text Use of the Site is on the terms contained in this document (Terms of Use). If you do not agree to these Terms of Use, or if you are not of a legal drinking age according to the laws of your country or state, please stop using the Site immediately. By accessing and using the Site you are indicating your acceptance to be bound by these Terms of Use. They are a legal agreement between you and us that can only be amended with our consent. They should be read in conjunction with any details provided on the Site about how the Site operates and the services which are available. You should also read our Privacy Policy.
+
+.modalCarlsberg
+	#perdedor.modal
+		a.modalCarlsberg--cerrar.modal-close(href="#!")
+			span.icon-icon-cerrar
+
+		.modal-content
+			.modalCarlsberg--contenido.modalCarlsberg--contenido__left
+				figure.modalCarlsberg--contenido--imagen
+					img(src="img/botella.png", alt="Imagen de la bicicleta Carlsberg")
+
+			.modalCarlsberg--contenido
+				span.modalCarlsberg--contenido--icon.icon-icon-perdedor
+				p.modalCarlsberg--contenido--titulo Lo sentimos ..
+				p.modalCarlsberg--contenido--text No has ganado una bicicleta, pero puedes seguir intentando e ingresar todos los códigos que quieras.
+				a.modalCarlsberg--contenido--boton.waves-effect.modal-close(href="#!") volver a intentar
+
+
+.modalCarlsberg.modalCarlsberg__ganador
+	#ganador.modal
+		a.modalCarlsberg--cerrar.modal-close(href="#!")
+			span.icon-icon-cerrar
+
+		.modal-content
+			.modalCarlsberg--contenido.modalCarlsberg--contenido__left
+				figure.modalCarlsberg--contenido--imagen
+					img.imagen__ganador(src="img/bicicleta-modal.png", alt="Imagen de la bicicleta Carlsberg")
+
+			.modalCarlsberg--contenido
+				span.modalCarlsberg--contenido--icon.icon-icon-ganador
+				p.modalCarlsberg--contenido--titulo Felicitaciones .!!
+				p.modalCarlsberg--contenido--text Guarda tu cupón y contacta al jefe de local para que coordinemos la entrega de tu premio.
+				a.modalCarlsberg--contenido--boton.waves-effect.modal-close(href="#!") volver a intentar
+            
+
+.modalCarlsberg.modalCarlsberg__error
+	#error.modal
+		a.modalCarlsberg--cerrar.modal-close(href="#!")
+			span.icon-icon-cerrar
+
+		.modal-content
+			.modalCarlsberg--contenido.modalCarlsberg--contenido__left
+				figure.modalCarlsberg--contenido--imagen
+					img.imagen__error(src="img/icon-error.png", alt="Imagen de la bicicleta Carlsberg")
+
+			.modalCarlsberg--contenido
+				span.modalCarlsberg--contenido--icon.icon-icon-error
+				p.modalCarlsberg--contenido--titulo Error
+				p.modalCarlsberg--contenido--text El código ingresado no existe en nuestra base de datos o bien ya fue ingresado por otro usuario.
+				a.modalCarlsberg--contenido--boton.waves-effect.modal-close(href="#!") volver a intentar
