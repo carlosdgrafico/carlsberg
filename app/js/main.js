@@ -2,6 +2,8 @@ $(document).ready(function(){
 
    $('select').material_select();
    $('.modal').modal();
+
+
    $('#edad').modal('open');
    $('.modal-overlay').css('pointer-events', 'none');
    $('#enviar').attr("disabled", true);
@@ -30,6 +32,7 @@ $(document).ready(function(){
          $(".modalCarlsberg--contenido--alert").css('display', 'inherit');
    	});
    }
+
 
 
    var wow = new WOW(

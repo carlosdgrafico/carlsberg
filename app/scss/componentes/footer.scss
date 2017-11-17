@@ -1,24 +1,50 @@
 
 .footer{
+   font-family: 'Carlsberg-Regular';
    margin-top: 7em;
    padding: 4em 0;
    text-align: center;
 
-   &--social{
+   .footer--social{
+      font-family: 'Carlsberg-Bold', Sans-Serif; /* 1 */
       float: right;
-      font-family: 'carlsberg-icons';
-      @include font-size(36);
-      @include line-height(36);
+      @include font-size(22);
+      @include line-height(24);
       margin-bottom: .5em;
+      text-align: right;
 
-      &--icon{
+      .footer--social--icon{
          color: #fff;
          display: inline-block;
-         margin-left: .5em;
+         margin-left: 1em;
          transition: all .3s ease-out;
-         &:hover{
-            opacity: .5;
+         .icon--img{
+            display: inline-block;
+            margin-right: .3em;
+            width: 18px;
          }
+         span{
+            transition: all .3s ease-out;
+         }
+
+         &:hover{
+            span{
+               opacity: .7;
+            }
+         }
+
+         @media(max-width: 480px){
+            margin-top: .3em;
+            margin-bottom: .3em;
+         }
+      }
+
+      .footer--social--legal{
+         font-family: Sans-Serif; /* 1 */
+         @include font-size(11);
+         @include line-height(16);
+         margin-top: .5em;
+         text-transform: uppercase;
       }
    }
 
