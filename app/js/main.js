@@ -3,12 +3,10 @@ $(document).ready(function(){
    $('select').material_select();
    $('.modal').modal();
 
-/*
 
    $('#edad').modal('open');
    $('.modal-overlay').css('pointer-events', 'none');
    $('#enviar').attr("disabled", true);
-
 
    if ($(window).width() <= 480) {
       $('#btn-menor').on('click', function(){
@@ -37,7 +35,6 @@ $(document).ready(function(){
       $('.modal-overlay').css('pointer-events', 'inherit');
    });
 
-*/
 
 
    $('.ancla').click(function(){
