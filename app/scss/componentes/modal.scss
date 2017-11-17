@@ -42,6 +42,10 @@
             @include line-height(27);
             margin: 1em 0;
             text-align: left;
+            &__item{
+               font-family: 'Carlsberg-Bold';
+               margin-top: 3em;
+            }
          }
       }
    }
