@@ -5,31 +5,45 @@
    font-family: 'Carlsberg-Bold';
    margin: 2em auto 0 auto;
    text-align: center;
+   @media(max-width: 480px){
+      background-position: center 10%;
+   }
+   @media(max-width: 320px){
+      background-position: center -90%;
+   }
    .bicileta--titulo{
-      display: inline-block;
+      display: block;
       @include font-size(57);
       @include line-height(69);
       &:last-child{
          text-transform: uppercase;
       }
       @media(max-width: 768px){
-         @include font-size(48);
-         @include line-height(55);
+         @include font-size(36);
+         @include line-height(40);
       }
       @media(max-width: 480px){
-         @include font-size(26);
-         @include line-height(30);
+         @include font-size(22);
+         @include line-height(24);
       }
       @media(max-width: 320px){
-         @include font-size(22);
-         @include line-height(26);
+         @include font-size(16);
+         @include line-height(20);
       }
    }
    .bicicleta--bicicleta{
       max-width: 1000px;
       margin: 4em auto;
       @media(max-width: 768px){
-         max-width: 90%;
+         margin: 2em auto;
+         max-width: 80%;
+      }
+      @media(max-width: 480px){
+         margin: 1.5em auto;
+      }
+      @media(max-width: 320px){
+         max-width: 75%;
+         margin: 1em auto;
       }
    }
 
@@ -45,4 +59,46 @@
          margin: 0 auto;
       }
    }
+}
+
+
+
+
+
+
+.ancla{
+   color: #fff;
+   margin: 3em auto 0 auto;
+   position: relative;
+   transition: all .3s;
+
+   @media(max-width: 480px){
+      margin: 1em auto 0 auto;
+   }
+
+   &--mouse{
+      @include font-size(50);
+   }
+
+   &--flecha{
+      @include font-size(20);
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 40px;
+      animation: animate-flecha 2s infinite ease;
+   }
+
+   &--text{
+      font-family: 'Carlsberg-Regular';
+      @include font-size(14);
+      font-weight: 300;
+      margin-top: 1.5em;
+   }
+}
+
+@keyframes animate-flecha {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0)}
+    40% {transform: translateY(-10px)}
+    60% {transform: translateY(-10px)}
 }
