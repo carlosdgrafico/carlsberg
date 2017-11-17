@@ -2,8 +2,35 @@ $(document).ready(function(){
 
    $('select').material_select();
    $('.modal').modal();
-
+   $('#edad').modal('open');
+   $('.modal-overlay').css('pointer-events', 'none');
    $('#enviar').attr("disabled", true);
+
+
+   if ($(window).width() <= 480) {
+      $('#btn-menor').on('click', function(){
+         $('.modal-overlay').css('pointer-events', 'inherit');
+         $("#img-edad").attr("src","img/icon-error.png");
+         $(".modalCarlsberg--contenido--imagen").css('background-image', 'none');
+         $(".modalCarlsberg--contenido--imagen img").css({
+            "margin-top": "10%",
+            "width": "35%"
+         });
+         $(".modalCarlsberg--contenido--alert").css('display', 'inherit');
+   	});
+   } else {
+      $('#btn-menor').on('click', function(){
+         $('.modal-overlay').css('pointer-events', 'inherit');
+         $("#img-edad").attr("src","img/icon-error.png");
+         $(".modalCarlsberg--contenido--imagen").css('background-image', 'none');
+         $(".modalCarlsberg--contenido--imagen img").css({
+            "margin-top": "20%",
+            "width": "50%"
+         });
+         $(".modalCarlsberg--contenido--alert").css('display', 'inherit');
+   	});
+   }
+
 
    var wow = new WOW(
      {

@@ -84,6 +84,25 @@
 				p.modalCarlsberg--contenido--titulo Lo sentimos ..
 				p.modalCarlsberg--contenido--text No has ganado una bicicleta, pero puedes seguir intentando e ingresar todos los códigos que quieras.
 				a.modalCarlsberg--contenido--boton.waves-effect.modal-close(href="#!") volver a intentar
+				
+				
+.modalCarlsberg.modalCarlsberg__edad
+	#edad.modal
+		// a.modalCarlsberg--cerrar.modal-close(href="#!")
+			span.icon-icon-cerrar
+
+		.modal-content
+			.modalCarlsberg--contenido.modalCarlsberg--contenido__left
+				figure.modalCarlsberg--contenido--imagen
+					img#img-edad(src="img/botella.png", alt="Imagen de la bicicleta Carlsberg")
+				p.modalCarlsberg--contenido--alert.animated.fadeInUp Lo sentimos, este sitio es solo para mayores de 18 años
+
+			.modalCarlsberg--contenido
+				// span.modalCarlsberg--contenido--icon.icon-icon-perdedor
+				p.modalCarlsberg--contenido--titulo Hola
+				p.modalCarlsberg--contenido--text Antes de ingresar al sitio y poder concursar, necesitamos saber si eres mayor de 18 años ?
+				a#btn-menor.modalCarlsberg--contenido--boton.waves-effect(href="#!") Soy menor
+				a.modalCarlsberg--contenido--boton.waves-effect.modal-close(href="#!") Soy mayor
 
 
 .modalCarlsberg.modalCarlsberg__ganador
