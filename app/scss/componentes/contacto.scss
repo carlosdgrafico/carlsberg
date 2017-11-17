@@ -2,6 +2,7 @@
 .contacto{
    color: #fff;
    margin: 0 auto;
+   margin-top: 6em;
    &--titulo{
       @include font-size(57);
       @include line-height(72);
@@ -124,6 +125,19 @@
 
    label{
       color: #fff;
+   }
+
+   a{
+      color: #BC7345;
+      margin-left: 1em;
+      transition: all .3s ease-out;
+      &:hover{
+         color: #fff;
+      }
+
+      @media(max-width: 768px){
+         padding-left: 1.1em;
+      }
    }
 }
 

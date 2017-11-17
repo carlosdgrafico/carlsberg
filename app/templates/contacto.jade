@@ -2,7 +2,7 @@ section.contacto
 	.container
 		.row
 			.col.s12.m5.wow.fadeInLeft
-				.contacto--titulo Como
+				.contacto--titulo Cómo
 					br
 					|participar ?
 				ul.contacto--list
@@ -18,7 +18,7 @@ section.contacto
 					li.contacto--list--item
 						span c
 						| Debes tener la boleta de compra y el código para exigir tu premio.
-				a.boton.waves-effect.modal-trigger(href="#bases") Bases y condiciones
+				// a.boton.waves-effect.modal-trigger(href="#bases") Bases y condiciones
 
 				ul
 					li
@@ -58,7 +58,7 @@ section.contacto
 
 						.input-field
 							input.validate(id='code' type='number' name='codigo' data-length="4" required)
-							label(for='codigo' data-error="ingresa un código valido") Código Carlsberg
+							label(for='codigo' data-error="ingresa un código valido") ingresa los 4 dígitos
 
 						.selectCarlsberg
 							.selectCarlsberg--icon
@@ -76,7 +76,8 @@ section.contacto
 
 						.contacto--formulario--check
 							input(type="checkbox", id="terms" name="terms", value="")
-							label(for="terms") Acepto las bases y condiciones
+							label(for="terms") Acepto las bases y condiciones 
+							a.modal-trigger(href="#bases") Ver bases
 
 						.contacto--formulario--botones
 							button.boton.boton__borrar.waves-effect(type="reset")
