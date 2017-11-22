@@ -139,7 +139,8 @@ $(document).ready(function(){
       })
       .catch((error, xhr) => {
         // if (error.response.status === 403) {
-          $('#error.modal').modal('open')
+          // $('#error.modal').modal('open')
+          $('#perdedor.modal').modal('open')
         // }
         // alert('Ocurrió un error la momento de procesar el formulario, inténtelo más tarde.')
         console.log(error);
