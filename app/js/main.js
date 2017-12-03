@@ -132,7 +132,7 @@ $(document).ready(function(){
         // console.log(response);
 
         if (response.status === 200) {
-          // $('#perdedor.modal').modal('open')
+          $('#perdedor.modal').modal('open')
         } else {
           $('#ganador.modal').modal('open')
         }
