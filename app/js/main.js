@@ -127,7 +127,7 @@ $(document).ready(function(){
 
     // console.log('code: ', code, values)
 
-    axios.patch(`http://carlsberg-backend-dev.us-east-1.elasticbeanstalk.com/contest/${code}`, values)
+    /* axios.patch(`http://carlsberg-backend-dev.us-east-1.elasticbeanstalk.com/contest/${code}`, values)
       .then((response) => {
         // console.log(response);
 
@@ -144,6 +144,16 @@ $(document).ready(function(){
         // }
         // alert('Ocurrió un error la momento de procesar el formulario, inténtelo más tarde.')
         console.log(error);
+      }); */
+
+      $.post( "code.php", { code: $('#code').val() })
+        .done(function( data ) {
+        console.log( "Data Loaded: " + data );
+        if (data == 1) {
+          $('#ganador.modal').modal('open')
+        } else {
+          $('#perdedor.modal').modal('open')
+        }
       });
   });
 });
